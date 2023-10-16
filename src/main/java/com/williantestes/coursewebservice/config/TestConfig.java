@@ -1,5 +1,6 @@
 package com.williantestes.coursewebservice.config;
 
+import java.sql.Date;
 import java.time.Instant;
 import java.util.Arrays;
 
@@ -11,6 +12,7 @@ import org.springframework.context.annotation.Profile;
 import com.williantestes.coursewebservice.entities.Category;
 import com.williantestes.coursewebservice.entities.Order;
 import com.williantestes.coursewebservice.entities.OrderItem;
+import com.williantestes.coursewebservice.entities.Payment;
 import com.williantestes.coursewebservice.entities.Product;
 import com.williantestes.coursewebservice.entities.User;
 import com.williantestes.coursewebservice.entities.enums.OrderStatus;
@@ -80,6 +82,11 @@ public class TestConfig implements CommandLineRunner {
 
 
     orderItemRepository.saveAll(Arrays.asList(oi1,oi2,oi3,oi4));
+
+    Payment pay1 = new Payment(null, Instant.parse("2019-07-22T21:21:22Z"), o1);
+    o1.setPayment(pay1);
+
+    orderRepository.save(o1);
   }
 
 }
