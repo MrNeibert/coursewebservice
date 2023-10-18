@@ -11,7 +11,7 @@ import com.williantestes.coursewebservice.repositories.UserRepository;
 
 @Service
 public class UserService {
-  
+
   @Autowired
   private UserRepository repository;
 
@@ -26,6 +26,10 @@ public class UserService {
 
   public User insert(User obj) {
     return repository.save(obj);
+  }
+
+  public void delete(Long Id){
+    repository.deleteById(Id);
   }
 
 }
