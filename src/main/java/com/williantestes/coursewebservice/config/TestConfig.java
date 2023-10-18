@@ -1,6 +1,5 @@
 package com.williantestes.coursewebservice.config;
 
-import java.sql.Date;
 import java.time.Instant;
 import java.util.Arrays;
 

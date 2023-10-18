@@ -2,7 +2,6 @@ package com.williantestes.coursewebservice.entities;
 
 import java.io.Serializable;
 import java.time.Instant;
-import java.util.Date;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
